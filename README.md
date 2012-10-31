@@ -15,3 +15,7 @@ Both a jQuery and non-jQuery version are available. They are slightly different 
 ## License
 
 Free speech & free beer (feel free to add a real license)
+
+### setTimeout in the non-jQ version
+
+The final `setTimeout()` function was removed from the non-jQ version as it seemed to be causing issues with the iframe loading correctly; alternatively it may be that the print dialog does not delay the function triggering, but that `jQuery` itself waits for the dialog to close.
