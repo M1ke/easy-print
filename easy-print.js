@@ -1,3 +1,11 @@
+/**
+* Easy-print
+*
+* 
+* @author: M1ke http://m1ke.me
+*
+*/
+
 var easyPrint=function(url){
 	$('body')
 		.find('iframe.print').remove()
