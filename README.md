@@ -8,6 +8,10 @@ Having used the `window.print()` command to speed this up slightly, then adding 
 
 This can be further combined with Google Chrome's `--kiosk --kiosk-printing` which will automatically print when the dialog is opened if the system has a default printer set.
 
+## Versions
+
+Both a jQuery and non-jQuery version are available. They are slightly different in function and the non-jQ version requires at least one `div` element is present on the page - someone who knows raw DOM scripting better might be able to fix this. The jQ version is smaller, so is recommended if, as is probably, you're already using jQuery. Both functions have the same name so can be used in the same file safely.
+
 ## License
 
 Free speech & free beer (feel free to add a real license)
