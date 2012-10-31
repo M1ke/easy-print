@@ -1,17 +1,21 @@
 /**
 * Easy-print
 *
-* 
+* @description: A function to quickly open a print dialog from a new URL
 * @author: M1ke http://m1ke.me
 *
 */
 
-var easyPrint=function(url){
-	$('body')
-		.find('iframe.print').remove()
-	.end().append('<iframe src="'+url+'" width="1" height="1" style="display:none" class="print"></iframe>')
-		.find('iframe.print:last').get(0).contentWindow.print();
-	setTimeout(function(){
-		$('iframe.print').remove();
-	},1000);
+var easyPrint=function(url) {
+	var element=document.getElementById("easy-print");
+	element && element.parentNode.removeChild(element);
+	var iframe=document.createElement('iframe');
+	iframe.setAttribute('src',url);
+	iframe.setAttribute('width',1);
+	iframe.setAttribute('height',1);
+	iframe.setAttribute('style','display:none');
+	iframe.setAttribute('id','easy-print');
+	var divs=document.getElementsByTagName('div');
+	divs[0].appendChild(iframe); 
+	document.getElementById("easy-print").contentWindow.print();
 };
