@@ -6,12 +6,12 @@
 *
 */
 
-var easyPrint=function(url){
+var easyPrint=function(url,time){
 	$('body')
 		.find('iframe.print').remove()
 	.end().append('<iframe src="'+url+'" width="1" height="1" style="display:none" class="print"></iframe>')
 		.find('iframe.print:last').get(0).contentWindow.print();
 	setTimeout(function(){
 		$('iframe.print').remove();
-	},1000);
+	},time ? time : 2000);
 };
