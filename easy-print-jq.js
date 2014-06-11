@@ -7,11 +7,16 @@
 */
 
 var easyPrint=function(url,time){
-	$('body')
-		.find('iframe.print').remove()
-	.end().append('<iframe src="'+url+'" width="1" height="1" style="display:none" class="print"></iframe>')
-		.find('iframe.print:last').get(0).contentWindow.print();
+	$('body').find('iframe.print').remove().end()
+	.append('<iframe src="'+url+'" width="1" height="1" style="display:none" class="print"></iframe>')
+	.find('iframe.print:last').get(0).contentWindow.print();
 	setTimeout(function(){
 		$('iframe.print').remove();
 	},time ? time : 2000);
 };
+$(function(){
+	$('a.easy-print').attr('title','This link will attempt to open your browser\'s print dialogue').click(function(e){
+		e.preventDefault();
+		easyPrint($(this).attr('href'));
+	});
+});
