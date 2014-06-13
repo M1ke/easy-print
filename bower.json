@@ -11,7 +11,7 @@
         }
     ],
     "dependencies": {
-        "jquery": ">=1.4.4"
+        "jquery": "/home/m1ke/web/lib/js/jquery/.git"
     },
     "description": "Easy print",
     "files": [
