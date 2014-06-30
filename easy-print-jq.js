@@ -14,9 +14,14 @@ var easyPrint=function(url,time){
 		$('iframe.print').remove();
 	},time ? time : 2000);
 };
-$(function(){
-	$('a.easy-print').attr('title','This link will attempt to open your browser\'s print dialogue').click(function(e){
+
+$.fn.easyPrint=function(){
+	return this.attr('title','This link will attempt to open your browser\'s print dialogue').click(function(e){
 		e.preventDefault();
 		easyPrint($(this).attr('href'));
 	});
+};
+
+$(function(){
+	$('a.easy-print').easyPrint();
 });
