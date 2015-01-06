@@ -11,9 +11,9 @@
         }
     ],
     "dependencies": {
-        "jquery": "/home/m1ke/web/lib/js/jquery/.git"
+        "jquery": "git@github.com:m1ke/jquery-bower.git",
     },
-    "description": "Easy print",
+    "description": "Quickly access browser print dialoguses using a dynamic iframe",
     "files": [
         "easy-print.js"
     ]
