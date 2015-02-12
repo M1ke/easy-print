@@ -11,7 +11,7 @@
         }
     ],
     "dependencies": {
-        "jquery": "git@github.com:m1ke/jquery-bower.git"
+        "jquery": "M1ke/jquery-bower"
     },
     "description": "Quickly access browser print dialoguses using a dynamic iframe",
     "files": [
