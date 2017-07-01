@@ -13,7 +13,6 @@ var easyPrint=function(url) {
 	iframe.setAttribute('src',url);
 	iframe.setAttribute('width',1);
 	iframe.setAttribute('height',1);
-	iframe.setAttribute('style','display:none');
 	iframe.setAttribute('id','easy-print');
 	var divs=document.getElementsByTagName('div');
 	divs[0].appendChild(iframe); 
